@@ -168,6 +168,8 @@ http://127.0.0.1:8000
   ]
 }
 
+---
+
 ## 2. Get Previous Analysis
 GET /result/{analysis_id}
 
