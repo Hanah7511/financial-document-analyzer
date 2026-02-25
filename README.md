@@ -19,7 +19,7 @@ This submission specifically addresses both categories mentioned in the assignme
 
 ---
 
-# 🐛 Bugs Identified and Fixes Applied
+## 🐛 Bugs Identified and Fixes Applied
 
 ### 1. Broken LLM Initialization (agents.py)
 ### Issue:
@@ -93,7 +93,7 @@ As a result, the system ignored user-uploaded financial documents and produced i
 
 ---
 
-# 🧱 System Architecture (Preserved)
+## 🧱 System Architecture (Preserved)
 - FastAPI backend
 - CrewAI multi-agent system
 - Modular tools and tasks
@@ -104,7 +104,7 @@ No framework changes were made to maintain the integrity of the original codebas
 
 ---
 
-# ⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 
 ## Note:
 - The application requires a Google Gemini API key to run the LLM agents.
@@ -139,7 +139,7 @@ uvicorn main:app --reload
 Server will start at:
 http://127.0.0.1:8000
 
-# 📡 API Documentation
+## 📡 API Documentation
 
 ### 1. Analyze Financial Document
 
@@ -176,7 +176,7 @@ GET /result/{analysis_id}
 GET /health
 
 
-# 📊 Key Improvements Over Original Codebase
+## 📊 Key Improvements Over Original Codebase
 
 - Fixed deterministic runtime crashes
 - Eliminated hallucination-prone prompts
@@ -185,13 +185,13 @@ GET /health
 - Improved reliability and maintainability
 - Preserved original architecture while stabilizing functionality
 
-# 🧠 Design Approach
+## 🧠 Design Approach
 
 This project focuses on debugging and stabilizing the provided codebase rather than rebuilding it.
 All fixes were applied while maintaining the original CrewAI architecture, ensuring alignment with the assignment requirement to debug deterministic bugs and optimize inefficient prompts.
 
 
-# 🔮 Future Enhancements (Bonus Scope)
+## 🔮 Future Enhancements (Bonus Scope)
 
 - Redis/Celery queue worker for concurrent requests
 - Database integration (PostgreSQL/SQLite) for persistent analysis storage
