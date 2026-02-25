@@ -106,6 +106,10 @@ No framework changes were made to maintain the integrity of the original codebas
 
 # ⚙️ Setup Instructions
 
+## Note:
+- The application requires a Google Gemini API key to run the LLM agents.
+- If not provided, the system will use a safe fallback configuration and display a warning instead of crashing, ensuring the application remains runnable during evaluation.
+
 ## 1. Clone Repository
 ```bash
 git clone https://github.com/Hana7511/financial-document-analyzer.git
@@ -135,7 +139,7 @@ uvicorn main:app --reload
 Server will start at:
 http://127.0.0.1:8000
 
-📡 API Documentation
+## 📡 API Documentation
 ## 1. Analyze Financial Document
 Endpoint:
 POST /analyze
