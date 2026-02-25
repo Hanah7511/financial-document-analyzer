@@ -139,18 +139,20 @@ uvicorn main:app --reload
 Server will start at:
 http://127.0.0.1:8000
 
-## 📡 API Documentation
+# 📡 API Documentation
+
 ## 1. Analyze Financial Document
-Endpoint:
-POST /analyze
 
-Request:
+### Endpoint
+`POST /analyze`
 
-- file: PDF file (multipart/form-data)
-- query: Optional analysis focus (form data)
-- store_result: Boolean to store result (default: true)
+### Request (Form Data)
+- **file**: PDF file (multipart/form-data) — *Required*
+- **query**: Optional analysis focus (string)
+- **store_result**: Boolean to store result (default: true)
 
-Response:
+### Sample Response
+```json
 {
   "status": "success",
   "analysis_id": "uuid",
@@ -158,7 +160,12 @@ Response:
   "query": "your query",
   "file_name": "document.pdf",
   "analysis": "comprehensive analysis text",
-  "agents_used": ["verifier", "financial_analyst", "risk_assessor", "investment_advisor"]
+  "agents_used": [
+    "verifier",
+    "financial_analyst",
+    "risk_assessor",
+    "investment_advisor"
+  ]
 }
 
 ## 2. Get Previous Analysis
