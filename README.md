@@ -21,7 +21,7 @@ This submission specifically addresses both categories mentioned in the assignme
 
 # 🐛 Bugs Identified and Fixes Applied
 
-## 1. Broken LLM Initialization (agents.py)
+### 1. Broken LLM Initialization (agents.py)
 ### Issue:
 - Undefined or poorly configured LLM
 - Risk of hallucinations and inconsistent outputs
@@ -33,7 +33,7 @@ This submission specifically addresses both categories mentioned in the assignme
 
 ---
 
-## 2. Inefficient and Malicious Prompts (task.py) ⭐ (Major Requirement)
+### 2. Inefficient and Malicious Prompts (task.py) ⭐ (Major Requirement)
 ### Issue:
 Original tasks encouraged:
 - Hallucinated financial advice
@@ -51,7 +51,7 @@ This violated real-world AI reliability standards.
 
 ---
 
-## 3. Non-Functional PDF Tool (tools.py) – Deterministic Runtime Bug
+### 3. Non-Functional PDF Tool (tools.py) – Deterministic Runtime Bug
 ### Issue:
 - Used undefined `Pdf()` loader (caused immediate crash)
 - No error handling
@@ -66,7 +66,7 @@ This violated real-world AI reliability standards.
 
 ---
 
-## 4. Uploaded File Was Not Being Analyzed (main.py) – Critical Logic Bug
+### 4. Uploaded File Was Not Being Analyzed (main.py) – Critical Logic Bug
 ### Issue:
 The original pipeline did not pass the uploaded file path to the Crew.
 As a result, the system ignored user-uploaded financial documents and produced irrelevant analysis.
@@ -78,7 +78,7 @@ As a result, the system ignored user-uploaded financial documents and produced i
 
 ---
 
-## 5. Incomplete Multi-Agent Workflow
+### 5. Incomplete Multi-Agent Workflow
 ### Issue:
 - Some agents lacked access to document tools
 - Tasks were not logically sequenced
@@ -110,13 +110,13 @@ No framework changes were made to maintain the integrity of the original codebas
 - The application requires a Google Gemini API key to run the LLM agents.
 - If not provided, the system will use a safe fallback configuration and display a warning instead of crashing, ensuring the application remains runnable during evaluation.
 
-## 1. Clone Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/Hana7511/financial-document-analyzer.git
 cd financial-document-analyzer
 ```
 
-## 2. Create virtual environment
+### 2. Create virtual environment
 ```bash
 python -m venv venv
 # Windows:
@@ -125,23 +125,23 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-## 3. Install Dependencies
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4.  Set Environment Variables
+### 4.  Set Environment Variables
 Create a .env file in the root directory:
 GOOGLE_API_KEY=your_google_gemini_api_key
 
-## 5. Running the Application
+### 5. Running the Application
 uvicorn main:app --reload
 Server will start at:
 http://127.0.0.1:8000
 
 # 📡 API Documentation
 
-## 1. Analyze Financial Document
+### 1. Analyze Financial Document
 
 ### Endpoint
 `POST /analyze`
@@ -170,14 +170,14 @@ http://127.0.0.1:8000
 
 ---
 
-## 2. Get Previous Analysis
+### 2. Get Previous Analysis
 GET /result/{analysis_id}
 
-## 3. Health Check
+### 3. Health Check
 GET /health
 
 
-## 📊 Key Improvements Over Original Codebase
+# 📊 Key Improvements Over Original Codebase
 
 - Fixed deterministic runtime crashes
 - Eliminated hallucination-prone prompts
@@ -186,13 +186,13 @@ GET /health
 - Improved reliability and maintainability
 - Preserved original architecture while stabilizing functionality
 
-## 🧠 Design Approach
+# 🧠 Design Approach
 
 This project focuses on debugging and stabilizing the provided codebase rather than rebuilding it.
 All fixes were applied while maintaining the original CrewAI architecture, ensuring alignment with the assignment requirement to debug deterministic bugs and optimize inefficient prompts.
 
 
-## 🔮 Future Enhancements (Bonus Scope)
+# 🔮 Future Enhancements (Bonus Scope)
 
 - Redis/Celery queue worker for concurrent requests
 - Database integration (PostgreSQL/SQLite) for persistent analysis storage
