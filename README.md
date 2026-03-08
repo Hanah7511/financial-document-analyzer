@@ -1,5 +1,14 @@
 # AI Financial Document Analyzer – Debugged CrewAI System
 
+## Assignment Context
+
+This repository is a debugging and stabilization assignment for a CrewAI-based
+Financial Document Analyzer.
+
+The task was to identify deterministic bugs, fix broken tool integrations,
+and improve prompt design while preserving the original architecture
+(CrewAI + FastAPI + Agents + Tasks).
+
 ## 📌 Overview
 This project is a fixed and enhanced version of the provided CrewAI-based Financial Document Analyzer.  
 The original repository contained multiple deterministic bugs, inefficient prompts, and non-functional tool integrations that prevented the system from working correctly.
